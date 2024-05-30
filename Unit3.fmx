@@ -1,0 +1,190 @@
+object Phone_directory: TPhone_directory
+  Left = 0
+  Top = 0
+  Caption = 'PHONE DIRECTORY APPLICATION'
+  ClientHeight = 594
+  ClientWidth = 505
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 51.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Full Name :'
+    TabOrder = 0
+    object nameedit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      TextSettings.Font.Size = 14.000000000000000000
+      Position.X = 136.000000000000000000
+      Position.Y = 1.000000000000000000
+      Padding.Left = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+    end
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 51.000000000000000000
+    Position.Y = 149.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Phone Number : '
+    TabOrder = 1
+  end
+  object phoneedit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    TextSettings.Font.Size = 14.000000000000000000
+    Position.X = 187.000000000000000000
+    Position.Y = 149.000000000000000000
+    Size.Width = 241.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Label3: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 51.000000000000000000
+    Position.Y = 194.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Email Address :'
+    TabOrder = 3
+  end
+  object emailedit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    TextSettings.Font.Size = 14.000000000000000000
+    Position.X = 187.000000000000000000
+    Position.Y = 194.000000000000000000
+    Size.Width = 241.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object savedatabtn: TButton
+    StyledSettings = [Family, FontColor]
+    Position.X = 51.000000000000000000
+    Position.Y = 270.000000000000000000
+    Size.Width = 135.000000000000000000
+    Size.Height = 34.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Save Information'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.Trimming = None
+    OnClick = savedatabtnClick
+  end
+  object ListBoxdata: TListBox
+    Margins.Left = 2.000000000000000000
+    Margins.Right = 2.000000000000000000
+    Position.X = 51.000000000000000000
+    Position.Y = 377.000000000000000000
+    Size.Width = 382.000000000000000000
+    Size.Height = 152.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Sorted = True
+    OnItemClick = ListBoxdataItemClick
+    Viewport.Width = 378.000000000000000000
+    Viewport.Height = 115.000000000000000000
+    object SearchBox1: TSearchBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 0
+      Size.Width = 378.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      object showdatabtn: TButton
+        StyledSettings = [Family, FontColor]
+        Position.X = 140.000000000000000000
+        Position.Y = -108.000000000000000000
+        Size.Width = 138.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Show All Contacts'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = showdatabtnClick
+      end
+    end
+  end
+  object Label4: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 15.000000000000000000
+    Size.Width = 489.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.HorzAlign = Center
+    Text = ' Phone Directory Application'
+    TabOrder = 7
+  end
+  object deletebtn: TButton
+    StyledSettings = [Family, FontColor]
+    Position.X = 330.000000000000000000
+    Position.Y = 552.000000000000000000
+    Size.Width = 103.000000000000000000
+    Size.Height = 34.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Exit'
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.Trimming = None
+    OnClick = deletebtnClick
+    object Button1: TButton
+      StyledSettings = [Family, FontColor]
+      Position.X = 10.000000000000000000
+      Position.Y = -281.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Delete'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.Trimming = None
+      OnClick = Button1Click
+    end
+  end
+  object showing: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 34.000000000000000000
+    Position.Y = 337.000000000000000000
+    Size.Width = 413.000000000000000000
+    Size.Height = 27.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.HorzAlign = Center
+    Text = 'Showing All Contacts'
+    TabOrder = 9
+  end
+end
